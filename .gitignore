@@ -1,8 +1,8 @@
 .env
 data/
-models/
+
 __pycache__/
-*.pkl
+
 *.csv
 downloaded_files/
 .streamlit/
