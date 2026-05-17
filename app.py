@@ -184,6 +184,10 @@ st.markdown("""
 
     /* ---- ΚΡΥΒΟΥΜΕ SELECT BOX LABEL ---- */
     [data-testid="stSelectbox"] label { display: none; }
+        /* Κρατάμε το sidebar πάντα ορατό — κρύβουμε το κουμπί που το κλείνει */
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
