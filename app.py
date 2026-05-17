@@ -12,7 +12,8 @@ import plotly.graph_objects as go
 st.set_page_config(
     page_title="InjuryIQ — Football Injury Analytics",
     page_icon="⚽",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"  # Sidebar πάντα ανοιχτό
 )
 
 # ============================================
@@ -477,7 +478,8 @@ if page == "Team Overview":
             values=risk_counts.values.tolist(),
             hole=0.68,              # Μέγα τρύπα για donut effect
             marker=dict(
-                colors=['#00FF87', '#FF9900', '#FF4444'],
+                colors=[ '#FF9900', '#FF4444','#00FF87'],
+                
                 line=dict(color='#0A0E1A', width=3)  # Διαχωριστικές γραμμές
             ),
             textinfo='percent',     # Εμφανίζουμε μόνο ποσοστά
