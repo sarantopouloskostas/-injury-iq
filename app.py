@@ -185,7 +185,19 @@ st.markdown("""
     /* ---- ΚΡΥΒΟΥΜΕ SELECT BOX LABEL ---- */
     [data-testid="stSelectbox"] label { display: none; }
         /* Κρατάμε το sidebar πάντα ορατό — κρύβουμε το κουμπί που το κλείνει */
-[data-testid="collapsedControl"] {
+    /* Εμφανίζουμε πάντα το sidebar — δεν επιτρέπουμε να κλείσει */
+[data-testid="stSidebar"] {
+    transform: none !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+}
+
+section[data-testid="stSidebarContent"] {
+    display: block !important;
+}
+
+/* Κρύβουμε το κουμπί που κλείνει το sidebar */
+button[data-testid="baseButton-headerNoPadding"] {
     display: none !important;
 }
 </style>
